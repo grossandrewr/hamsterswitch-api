@@ -1,0 +1,19 @@
+{
+  "name": "spotify-api",
+  "version": "1.0.0",
+  "description": "Backend for spotify gpt app",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grossandrewr/spotgpt-api.git"
+  },
+  "author": "Andrew Gross",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grossandrewr/spotgpt-api/issues"
+  },
+  "homepage": "https://github.com/grossandrewr/spotgpt-api#readme"
+}
