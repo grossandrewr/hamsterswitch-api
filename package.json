@@ -4,7 +4,8 @@
   "description": "Backend for spotify gpt app",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test"
+    "start": "node server.js",
+    "test": ""
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/grossandrewr/spotgpt-api/issues"
   },
-  "homepage": "https://github.com/grossandrewr/spotgpt-api#readme"
+  "homepage": "https://github.com/grossandrewr/spotgpt-api#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
