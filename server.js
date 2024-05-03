@@ -4,14 +4,20 @@ import { makeGPTRequest } from './openai.js';
 const app = express();
 app.use(express.json());
 
+import cors from 'cors';
+app.use(cors());
+
 app.post('/get-albums', async (req, res) => {
   try {
     const inputString = req.body.searchString;
     const { message } = await makeGPTRequest(inputString);
     const content = message.content;
     validateResponse(content)
-    res.status(200).json({ data: content });
+    console.log("Sending 200")
+    res.status(200).json(content);
   } catch (error) {
+    console.log("Sending 500")
+
     console.error("Error:", error);
     res.status(500).send("Internal Server Error");
   }
