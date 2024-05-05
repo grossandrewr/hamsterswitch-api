@@ -4,7 +4,7 @@ config();
 import OpenAI from "openai";
 
 const openAIKey = process.env.OPENAI_API_KEY;
-const openai = new OpenAI({ apiKey: openAIKey, dangerouslyAllowBrowser: true });
+const openai = new OpenAI({ apiKey: openAIKey });
 
 const systemPrompt = `
 Overview:
