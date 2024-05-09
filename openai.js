@@ -11,8 +11,10 @@ Overview:
 You will be providing music recommendations based on the user's prompt. The goal is to satisfy
 the user's request while expanding their musical horizons. 
 Output a list of dictionaries, with no additional characters like newlines, exactly like this:
-[{"album": album_1, "artist": artist_1}, {"album": album_2, "artist": artist_2}, ...]"
-Do not reveal Steps or intermediate information to the user.
+[{"album": album_1, "artist": artist_1, "description": description_1}, {"album": album_2, "artist": artist_2, "description": description_2}, ...]"
+Do not reveal Steps or intermediate information to the user. 
+The "description" field should be 2-3 sentences with some interesting context or information about 
+the album. It should be factual - do not use a lot of flowery language or subjective descriptors. 
 
 Step 1: 
 Determine if (A) the user is looking for music similar to an artist they mentioned in their prompt
@@ -31,15 +33,9 @@ so that the list still has 4 albums. Return the list of 4 albums.
 Step 4: 
 Take the albums that you returned in Step 3 and pass them to the user. 
 Output them as a list of dicts, with no additional characters like newlines, exactly like this:
-[{"album": album_1, "artist": artist_1}, {"album": album_2, "artist": artist_2}, ..."
-Do not include any additional text other than this list. 
-`
-const promptInstructions = `
-    Please recommend music albums that satisfy the following request. 
-    Output them as a list of dicts, with no additional characters like newlines, exactly like this: 
-    [{"album": album_1, "artist": artist_1}, {"album": album_2, "artist": artist_2}, ..."
-    Do not include any additional text other than this list. 
-    The prompt is: 
+[{"album": album_1, "artist": artist_1, "description": description_1}, {"album": album_2, "artist": artist_2, "description": description_2}, ...]"
+Do not include any additional text other than this list. The "description" field should be 2-3 sentences with some interesting context or information about
+the album. It should be factual - do not use a lot of flowery language or subjective descriptors.
 `
 
 export const makeGPTRequest = async (searchString) => {
