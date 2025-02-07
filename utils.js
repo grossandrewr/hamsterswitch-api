@@ -2,7 +2,6 @@ export const validateAlbumsList = (content) => {
   let contentArray;
   try {
     contentArray = JSON.parse(content);
-    contentArray = ["asfads"];
   } catch {
     throw new Error("Error parsing JSON");
   }
