@@ -1,7 +1,7 @@
-import { config } from 'dotenv';
+import { config } from "dotenv";
 import OpenAI from "openai";
 
-config(); 
+config();
 const openAIKey = process.env.OPENAI_API_KEY;
 const openai = new OpenAI({ apiKey: openAIKey });
 
@@ -10,14 +10,14 @@ export const makeGptSearchRequest = async (gptSystemPrompt, searchString) => {
     messages: [
       {
         role: "system",
-        content: gptSystemPrompt
+        content: gptSystemPrompt,
       },
       {
         role: "user",
-        content: searchString
+        content: searchString,
       },
     ],
     model: "gpt-4o-2024-08-06",
   });
   return completion.choices[0];
-}
+};

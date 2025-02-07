@@ -25,7 +25,7 @@ export const albumSearchSystemPrompt = `
   Output a list of dictionaries, with no additional characters like newlines, exactly like this:
   [{"album": album_1, "artist": artist_1}, {"album": album_2, "artist": artist_2}, ...]"
   Do not reveal Steps or intermediate information to the user.
-`
+`;
 
 export const descriptionSystemPrompt = `
     Return 2-4 sentences about the submitted album with some interesting context or information about the album. 
@@ -40,4 +40,4 @@ export const descriptionSystemPrompt = `
      - Who influenced the album, or who was influenced by the album
      - What the critical reception was
      - Interesting trivia or facts about the album  
-  `
+  `;
